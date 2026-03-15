@@ -1,0 +1,9 @@
+<div class="toolbar">
+  <a href="/Add" class="btn btn-add">Добавить</a>
+</div>
+
+<div class="list">
+  {{#each contacts}}
+    {{> rowButton id=this.id name=this.name phone=this.phone href=(concat '/Update?id=' this.id)}}
+  {{/each}}
+</div>

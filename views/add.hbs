@@ -1,0 +1,14 @@
+<div class="list">
+  {{#each contacts}}
+    {{> rowButton id=this.id name=this.name phone=this.phone disabled=true}}
+  {{/each}}
+</div>
+
+<form method="POST" action="/Add" class="entry-form">
+  <input type="text" name="name"  placeholder="Имя"     required>
+  <input type="text" name="phone" placeholder="Телефон"  required>
+  <div class="form-buttons">
+    <button type="submit" class="btn btn-add">Добавить</button>
+    {{{cancelButton '/'}}}
+  </div>
+</form>

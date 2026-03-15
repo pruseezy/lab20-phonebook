@@ -1,0 +1,20 @@
+<div class="list">
+  {{#each contacts}}
+    {{> rowButton id=this.id name=this.name phone=this.phone disabled=true}}
+  {{/each}}
+</div>
+
+<form method="POST" action="/Update" class="entry-form">
+  <input type="hidden" name="id"    value="{{entry.id}}">
+  <input type="text"   name="name"  value="{{entry.name}}"  id="nameInput"  required>
+  <input type="text"   name="phone" value="{{entry.phone}}" id="phoneInput" required>
+  <div class="form-buttons">
+    <button type="submit" class="btn btn-add">Изменить</button>
+    <button type="submit" form="deleteForm" class="btn btn-delete" id="deleteBtn">Удалить</button>
+    {{{cancelButton '/'}}}
+  </div>
+</form>
+
+<form method="POST" action="/Delete" id="deleteForm">
+  <input type="hidden" name="id" value="{{entry.id}}">
+</form>

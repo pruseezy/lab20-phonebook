@@ -1,0 +1,11 @@
+{{#if disabled}}
+  <div class="row-btn disabled">
+    <span class="col-name">{{name}}</span>
+    <span class="col-phone">{{phone}}</span>
+  </div>
+{{else}}
+  <a href="{{href}}" class="row-btn">
+    <span class="col-name">{{name}}</span>
+    <span class="col-phone">{{phone}}</span>
+  </a>
+{{/if}}
