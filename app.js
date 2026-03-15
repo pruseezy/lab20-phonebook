@@ -39,6 +39,10 @@ app.get('/', (req, res) => {
 app.get('/Add', (req, res) => {
   res.render('add', { contacts: readDB() });
 });
+// GET /data
+app.get('/data', (req, res) => {
+  res.json(readDB());
+});
 
 // GET /Update?id=N
 app.get('/Update', (req, res) => {
